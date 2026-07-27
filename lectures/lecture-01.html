@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>1차시 강의안</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav class="lecture-nav">
+  <a class="home" href="../index.html">← 목록</a>
+  <a href="lecture-01.html" class="active">1차시</a>
+</nav>
+
+<div class="lecture-detail">
+  <span class="topic-tag">1차시 · 인포그래픽 &amp; 숏폼 제작</span>
+  <h1>AI 활용 콘텐츠 제작 실무</h1>
+  <p class="instructor-line">강사 한성은 · 2026.07.27</p>
+
+  <div class="goal-box">
+    <h2>학습 목표</h2>
+    <ul class="content-list">
+      <li>병원 홈페이지 디자인과 공식 CI를 반영한 인포그래픽을 AI로 직접 제작할 수 있다</li>
+      <li>Google Flow와 Gemini 에이전트를 활용해 병원 홍보 캐릭터와 숏폼 영상을 기획·제작할 수 있다</li>
+      <li>완성된 영상 클립을 CapCut으로 이어붙여 하나의 홍보 영상으로 완성할 수 있다</li>
+    </ul>
+  </div>
+
+  <div class="section-nav">
+    <a href="#part1">파트1 · 인포그래픽 제작</a>
+    <a href="#part2">파트2 · 숏폼 영상 제작</a>
+    <a href="#refs">참고 자료</a>
+  </div>
+
+  <div class="block" id="part1">
+    <h2>파트1 · 인포그래픽 제작 (AI 활용 콘텐츠 구조화)</h2>
+    <ul class="content-list">
+      <li>인포그래픽이란? 정보(Information)+그래픽(Graphic) — 긴 문서를 요약하는 게 아니라 핵심만 뽑아 "보이게" 만드는 시각적 매체</li>
+      <li>포스터형, 절차 안내형, 자료 요약형 등 다양한 인포그래픽 활용 예시</li>
+      <li>Canva를 활용한 이미지 사이즈 수정(가로형/세로형/인스타그램 등) 및 QR 코드 반영 방법</li>
+    </ul>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 1 · 홍보 포스터 제작</span>
+      <p class="prompt-title">기본형 포스터</p>
+      <pre class="prompt-text">홈페이지의 분위기와 디자인, 컬러감을 잘 반영하고 첨부한 공식 CI를 정확하게 반영하여 홍보용 포스터를 제작해줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 2 · 절차 안내 인포그래픽</span>
+      <p class="prompt-title">입퇴원 절차 인포그래픽</p>
+      <pre class="prompt-text">[우리 병원 입퇴원 절차]의 내용을 인포그래픽으로 만들어 안내하고 싶어.
+
+https://www.knmh.go.kr/
+홈페이지에서 그 내용을 찾아서,
+우리 병원 홈페이지의 디자인과 컬러를 살리고,
+공식CI를 정확하게 반영하여
+세로형 인포그래픽을 만들어줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 3 · 병원소개 구성안</span>
+      <p class="prompt-title">자료(병원소개) + 구성안 요청</p>
+      <pre class="prompt-text">당신은 공공기관 홍보 담당자이자 인포그래픽 기획 전문가입니다. 아래 자료를 한 장짜리 인포그래픽 구성안으로 정리해 주세요.
+
+[자료]
+국립공주병원은 보건복지부 소속 국립정신병원으로 2002년 현재 명칭으로 개편되었다. 충남 공주시에 위치하며 중부권(대전·세종·충청) 정신건강 거점 공공정신의료기관 역할을 맡고 있다. 일반정신과·노인정신과·소아정신과·정신재활치료과 등으로 구성되어 있으며, 정신질환 진료와 사회복귀 지원, 정신보건 인력 교육·훈련, 지역사회 정신건강사업 지원을 주요 기능으로 한다.
+
+출력 형식:
+메인 타이틀 (10자 이내)
+핵심 키워드 3가지 (아이콘으로 표현할 요소)
+섹션별 구성안 (제목 + 1줄 설명, 3~4개 섹션)
+추천 색상 톤과 레이아웃 방향
+       (예: 타임라인형, 카드형, 다이어그램형)</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 4 · 입소 절차 구성안</span>
+      <p class="prompt-title">자료(입소 절차) + 구성안 요청</p>
+      <pre class="prompt-text">당신은 공공기관 인포그래픽 기획자입니다.
+
+아래 자료를 바탕으로 "입소 절차 안내" 인포그래픽 구성안을 작성해 주세요.
+
+[자료]
+국립공주병원은 병원 직원 기숙사를 리모델링하여 정신질환자 사회복귀를 위한 공동생활가정 "다울터"를 개소했다. 국립정신병원 내 두 번째 사례이며, 충남 지역 정신재활시설의 75%가 천안·아산에 몰려 있어 이번 개소가 지역 사각지대를 완화할 것으로 기대된다. 만 15세 이상이 신청할 수 있으며, 정신건강 평가와 1~2주 적응기간을 거쳐 입소한 뒤 자립훈련(1단계), 직업재활(2단계) 순으로 프로그램이 진행된다.
+
+출력 형식:
+1. 타이틀
+2. 절차 플로우차트 단계별 문구 (4단계, 각 5단어 이내)
+3. 강조할 핵심 수치 1가지와 표현 아이디어
+4. 하단 안내 문구 (신청 방법 요약, 2줄 이내)
+5. 따뜻하고 감성적인 느낌의 이미지</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 5 · 방대한 문서 도식화 (ChatGPT)</span>
+      <p class="prompt-title">긴 문서 요약 인포그래픽</p>
+      <pre class="prompt-text">첨부한 문서의 내용을 한눈에 알아보기 쉽게 인포그래픽으로 만들어줘</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 6 · 아티클 요약 (ChatGPT)</span>
+      <p class="prompt-title">가로형 요약 인포그래픽</p>
+      <pre class="prompt-text">이 아티클을 핵심적인 사항만 간단하게 요약정리하여 한눈에 보기 쉽게 가로형 인포그래픽으로 만들어줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 7 · 영어 아티클 요약 (Gemini Notebook)</span>
+      <p class="prompt-title">영문 자료 요약 인포그래픽</p>
+      <pre class="prompt-text">영어로 된 이 아티클을 핵심적인 사항만 간단하게 요약정리하여 한눈에 보기 쉽게 가로형 인포그래픽으로 만들어줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <p class="instructor-line" style="margin-top:1.5rem;">실습: Canva에서 이미지 사이즈 설정 후 QR 코드(병원 홈페이지 주소)를 반영해 나만의 인포그래픽을 완성해봅니다.</p>
+  </div>
+
+  <div class="block" id="part2">
+    <h2>파트2 · Google Flow 활용 숏폼 제작 (기획-제작-수정)</h2>
+    <ul class="content-list">
+      <li>홍보 캐릭터 설정: Gemini 나노바나나로 3D 애니메이션 스타일 캐릭터 생성</li>
+      <li>Flow 요금제 구조: 무료 플랜은 매일 50크레딧 충전, 10초 영상 기준 하루 약 3개 제작 가능</li>
+      <li>제작 흐름: 캐릭터 설정(목소리+신체) → 에이전트 설정(일관성·공식 CI 반영) → 주제·스토리보드·대본 기획 → 클립 생성 → CapCut으로 영상 합치기</li>
+    </ul>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 8 · 홍보 캐릭터 생성 (제미나이 나노바나나)</span>
+      <p class="prompt-title">영상 홍보 캐릭터 생성</p>
+      <pre class="prompt-text">사진 속 인물을 모델로 하여, 국립공주병원 홈페이지의 캐릭터처럼 부드럽고 둥근 형태의 조각된 느낌과 매끄러운 점토 질감을 살린 고화질의 디테일한 3D 애니메이션 스타일 캐릭터로 만들어줘. 픽사 스타일의 과장된 큰 머리와 작은 몸 비율을 적용하고, 신뢰감을 주는 의료행정 직원(또는 의료인) 복장(정장 재킷, 깔끔한 흰색 셔츠, 목걸이형 사원증)을 착용하게 해줘. 따뜻하고 부드러운 스튜디오 조명 아래, 균일하고 깨끗한 배경으로 렌더링해줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 9 · 몸과 의상 설명</span>
+      <p class="prompt-title">전신 3분할 사진</p>
+      <pre class="prompt-text">전신 3분할 사진을 정면, 45도 측면, 후면의 3가지 각도로 만들어 줘. 고해상도에 평면 스튜디오 조명, 어디에서 봐도 일관된 해부학적 비율, 흰색 단색 배경을 갖춰야 해.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 10 · 목소리 설정 (선택 사항)</span>
+      <p class="prompt-title">성능 맞춤설정</p>
+      <pre class="prompt-text">30대 한국 여성 뉴스 아나운서 같은 차분하고 전문적인 목소리. 목소리는 또렷하고 안정감 있으며, 신뢰감을 주고 이해하기 쉬운 톤으로 자연스러운 속도와 세련된 방송 진행 느낌을 유지합니다.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 11 · 에이전트 설정 (캐릭터 일관성)</span>
+      <p class="prompt-title">캐릭터 전신 사진 업로드 시 요청사항</p>
+      <pre class="prompt-text">홍보캐릭터가 장면마다 일관성을 유지하도록 한다.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 12 · 에이전트 설정 (공식 CI 반영)</span>
+      <p class="prompt-title">병원 공식 CI(로고) 업로드 시 요청사항</p>
+      <pre class="prompt-text">영상에서 병원 건물이나 내부에서 보여지는 병원 공식 명칭이 깨지거나 오류가 없도록 정확하게 반영한다.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 13 · 숏폼 주제 제안</span>
+      <p class="prompt-title">아이디어 3가지 제안받기</p>
+      <pre class="prompt-text">첨부한 이미지 주인공이 국립공주병원을 소개하는 쇼츠 영상을 만들건데 아이디어 3가지를 제안해줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 14 · 스토리보드 &amp; 대본 요청</span>
+      <p class="prompt-title">10초 클립 3개 구성 스토리보드</p>
+      <pre class="prompt-text">국립공주병원에 소개영상을 만들려고 해. 각각 10초 분량의 영상 3개로 구성된 스토리보드를 구성해줘. 사실에 기반한 병원소개로 클립당 화면 전환 및 대사 호흡이 10초 내에서 안정적으로 연출되도록 구성해줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <p class="instructor-line" style="margin-top:1.5rem;">주의: Flow·에이전트가 작성하는 병원 소개 내용에 오류가 있을 수 있습니다. 이때는 Gemini에게 스토리보드 내용을 사실에 기반해 다시 작성해 달라고 요청한 뒤, 정확한 내용을 Flow에 복사해 넣습니다.</p>
+
+    <p class="instructor-line">실습: Flow 무료 플랜은 클립당 최대 10초(확장 시 20초), 클립 1개당 15크레딧이 소모됩니다. 완성한 영상 3개를 각각 다운로드해 CapCut에서 이어붙이고, 장면전환과 자동 자막을 적용해 하나의 홍보 영상으로 내보내봅니다.</p>
+  </div>
+
+  <div class="block" id="refs">
+    <h2>참고 자료</h2>
+    <ul class="content-list">
+      <li>국립공주병원 홈페이지: <a href="https://www.knmh.go.kr/" target="_blank" rel="noopener">https://www.knmh.go.kr/</a></li>
+      <li>실습 도구: Claude, Gemini(나노바나나), Canva, Google Flow, CapCut</li>
+    </ul>
+  </div>
+</div>
+
+<script src="../js/prompt-copy.js"></script>
+</body>
+</html>

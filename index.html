@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>강의 자료실</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="period" id="course-period"></span>
+    <h1 id="course-title"></h1>
+    <p class="subtitle" id="course-subtitle"></p>
+    <p class="description" id="course-description"></p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="instructor-card">
+    <div class="name">
+      <span id="instructor-name"></span>
+      <span class="label">강사</span>
+    </div>
+    <div class="tags" id="instructor-tags"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section>
+    <h2>
+      강의 목차
+      <span class="hint">카드를 누르면 해당 차시로 이동합니다</span>
+    </h2>
+    <div class="lecture-grid" id="lecture-grid"></div>
+  </section>
+
+  <section>
+    <h2 id="materials-title"></h2>
+    <p class="section-desc" id="materials-desc"></p>
+    <div class="materials-grid" id="materials-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>문의: 이메일 또는 연락처를 입력하세요</p>
+</footer>
+
+<script src="data/lectures.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
