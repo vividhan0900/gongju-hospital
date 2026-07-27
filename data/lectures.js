@@ -33,7 +33,7 @@ const MATERIALS = [
     title: "실습 결과물 업로드 (패들렛)",
     description: "실습 중 만든 인포그래픽·영상 결과물을 패들렛에 올리고 함께 공유해요",
     type: "padlet",
-    url: "",
+    url: "https://padlet.com/vividhan0900/bit-ly-ai-48y4o0i5vn9cbp3g",
   },
   {
     icon: "📊",
